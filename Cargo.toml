@@ -1,0 +1,4 @@
+[package]
+name = "trimesh"
+version = "0.1.0"
+authors = ["nick"]
