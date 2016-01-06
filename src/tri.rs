@@ -1,8 +1,7 @@
 extern crate nalgebra;
 
 use std::fmt;
-use nalgebra::Vec3;
-use nalgebra::cross;
+use Vec3;
 
 #[derive(Debug,Copy,Clone)]
 pub struct Tri{
@@ -17,10 +16,10 @@ impl Tri {
 	///#Examples
 	///```
 	///# use trimesh::tri::Tri;
-	///# use trimesh::Vec3<f64>::Vec3<f64>;
-	///let p1 = Vec3<f64>::new(0.,0.,0.);
-	///let p2 = Vec3<f64>::new(3.,0.,0.);
-	///let p3 = Vec3<f64>::new(0.,4.,0.);
+	///# use trimesh::Vec3;
+	///let p1 = Vec3::new(0.0f64,0.,0.);
+	///let p2 = Vec3::new(3.0f64,0.,0.);
+	///let p3 = Vec3::new(0.0f64,4.,0.);
 	///
 	///let t1 = Tri::new_raw(p1,p2,p3);
 	///```
@@ -33,11 +32,11 @@ impl Tri {
 	///#Examples
 	///```
 	///# use trimesh::tri::Tri;
-	///# use trimesh::Vec3<f64>::Vec3<f64>;
-	///let p1 = Vec3<f64>::new(0.,0.,0.);
-	///let p2 = Vec3<f64>::new(3.,0.,0.);
-	///let p3 = Vec3<f64>::new(0.,4.,0.);
-	///let n = Vec3<f64>::new(0.,0.,1.);
+	///# use trimesh::Vec3;
+	///let p1 = Vec3::new(0.0f64,0.,0.);
+	///let p2 = Vec3::new(3.0f64,0.,0.);
+	///let p3 = Vec3::new(0.0f64,4.,0.);
+	///let n = Vec3::new(0.0f64,0.,1.);
 	///
 	///let t1 = Tri::new(p1,p2,p3,n);
 	///```
@@ -50,16 +49,16 @@ impl Tri {
 	///#Examples
 	///```
 	///# use trimesh::tri::Tri;
-	///# use trimesh::Vec3<f64>::Vec3<f64>;
-	///let p1 = Vec3<f64>::new(0.,0.,0.);
-	///let p2 = Vec3<f64>::new(3.,0.,0.);
-	///let p3 = Vec3<f64>::new(0.,4.,0.);
-	///# let n = Vec3<f64>::new(0.,0.,1.);
+	///# use trimesh::Vec3;
+	///let p1 = Vec3::new(0.0f64,0.,0.);
+	///let p2 = Vec3::new(3.0f64,0.,0.);
+	///let p3 = Vec3::new(0.0f64,4.,0.);
+	///let n = Vec3::new(0.0f64,0.,1.);
 	///
 	///let t1 = Tri::new(p1,p2,p3,n);
-	///assert_eq!(t1.has_point(&p3),true);
-	///let p4 = Vec3<f64>::new(5.,5.,5.);
-	///assert_eq!(t1.has_point(&p4),false);
+	///assert_eq!(t1.has_point(p3),true);
+	///let p4 = Vec3::new(5.0f64,5.,5.);
+	///assert_eq!(t1.has_point(p4),false);
 	///```
 	pub fn has_point (&self, p : Vec3<f64>) -> bool{
 		let vs = self.vs;

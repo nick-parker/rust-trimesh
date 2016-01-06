@@ -15,9 +15,8 @@ extern crate trimesh;
 extern crate kiss3d;
 extern crate nalgebra;
 
-use nalgebra::Vec3;
-use nalgebra::cross;
-use kiss3d::window::Window;
+use trimesh::Vec3;
+// use kiss3d::window::Window;
 
 fn main() {
     let v1 = Vec3::new(1.0f64, 0.0, 0.0);
