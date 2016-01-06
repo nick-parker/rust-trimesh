@@ -2,3 +2,17 @@
 name = "trimesh"
 version = "0.1.0"
 authors = ["nick"]
+
+[dependencies]
+nalgebra = "*"
+
+[dependencies.kiss3d]
+git = "https://github.com/Ticki/kiss3d"
+
+[lib]
+name = "trimesh"
+path = "src/lib.rs"
+
+[[bin]]
+name = "trimesh_test"
+path = "src/main.rs"

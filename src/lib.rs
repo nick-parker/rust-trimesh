@@ -1,4 +1,7 @@
-pub mod vector;
+extern crate kiss3d;
+extern crate nalgebra;
+
 pub mod tri;
 pub mod stl;
-mod scale;
+pub mod mesh;
+pub mod stlerror;
